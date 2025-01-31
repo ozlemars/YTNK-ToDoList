@@ -13,15 +13,17 @@ Bu proje, İstanbul Eğitim Akademesi - Yetenek Başakşehir Proje kapsamında, 
 - **Görev Silme**: Tamamlanan veya gereksiz olan görevleri silebilirsiniz. 🗑️
 - **Öncelik Belirleme**: Görevlerin önceliğine göre **Yüksek**, **Orta** veya **Düşük** seviyelerde renk kodlaması yapılır. 🔴🟠🟢
 
-## Teknolojiler ⚙️
 
-Bu projede aşağıdaki teknolojiler kullanılmıştır:
+##  **Kullanılan Teknolojiler** 🛠️⚙️
 
-- **ASP.NET MVC 5**
-- **C#**
-- **HTML5 / CSS3**
-- **JavaScript**
-- **Bootstrap 5** (Tasarım ve duyarlı düzen için)
+| Teknoloji              | Açıklama                                           |
+|------------------------|---------------------------------------------------|
+| **ASP.NET MVC 5**       | Web uygulamaları geliştirmek için kullanılan framework |
+| **C#**                  | Backend geliştirme için kullanılan güçlü programlama dili |
+| **HTML5 & CSS3**        | Web sayfası yapısı ve tasarımı için kullanılan diller |
+| **JavaScript**          | Dinamik işlevsellik sağlamak için kullanılan dil |
+| **Bootstrap 5**         | Modern, duyarlı ve kullanıcı dostu UI tasarımı için |
+
 
 ## Proje Özellikleri 💡
 
