@@ -11,3 +11,6 @@ idea/
 # Diğer geçici dosyalar
 bin/
 obj/
+
+# Migrations klasörünü ignore et
+ToDoListMVC/Migrations/
