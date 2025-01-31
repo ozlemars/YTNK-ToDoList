@@ -1,0 +1,13 @@
+# JetBrains IDE dosyaları
+.idea/
+idea/
+
+# Visual Studio dosyaları
+.vs/
+*.sin
+*.user
+*.suo
+
+# Diğer geçici dosyalar
+bin/
+obj/
