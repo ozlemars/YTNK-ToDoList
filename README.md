@@ -13,8 +13,7 @@ Bu proje, İstanbul Eğitim Akademesi - Yetenek Başakşehir Proje kapsamında, 
 - **Görev Silme**: Tamamlanan veya gereksiz olan görevleri silebilirsiniz. 🗑️
 - **Öncelik Belirleme**: Görevlerin önceliğine göre **Yüksek**, **Orta** veya **Düşük** seviyelerde renk kodlaması yapılır. 🔴🟠🟢
 
-
-##  **Kullanılan Teknolojiler** 🛠️⚙️
+## **Kullanılan Teknolojiler** 🛠️⚙️
 
 | Teknoloji              | Açıklama                                           |
 |------------------------|---------------------------------------------------|
@@ -23,7 +22,6 @@ Bu proje, İstanbul Eğitim Akademesi - Yetenek Başakşehir Proje kapsamında, 
 | **HTML5 & CSS3**        | Web sayfası yapısı ve tasarımı için kullanılan diller |
 | **JavaScript**          | Dinamik işlevsellik sağlamak için kullanılan dil |
 | **Bootstrap 5**         | Modern, duyarlı ve kullanıcı dostu UI tasarımı için |
-
 
 ## Proje Özellikleri 💡
 
@@ -37,16 +35,21 @@ Bu proje, İstanbul Eğitim Akademesi - Yetenek Başakşehir Proje kapsamında, 
 Proje, kullanıcıların rahatça görevlerini takip edebilmesi için basit ve etkili bir arayüze sahiptir. Aşağıdaki görsellerde, uygulamanın ana sayfasındaki görev kartları, görev ekleme ve düzenleme işlemleri gösterilmektedir.
 
 ### 🏠 Anasayfa
-Anasayfa, tüm görevlerin listelendiği ve yönetilebildiği sayfadır.
+Anasayfa, tüm görevlerin listelendiği ve yönetilebildiği sayfadır.  
 ![Anasayfa](https://i.imgur.com/AOT7UsA.png)
 
 ### ➕ Görev Ekleme
-Yeni görev eklemek için bu sayfa kullanılmaktadır.
+Yeni görev eklemek için bu sayfa kullanılmaktadır.  
 ![Görev Ekleme](https://i.imgur.com/mqtBzZ6.png)
 
 ### ✏️ Görev Güncelleme
-Var olan bir görevi düzenlemek için bu sayfa kullanılmaktadır.
+Var olan bir görevi düzenlemek için bu sayfa kullanılmaktadır.  
 ![Görev Güncelleme](https://i.imgur.com/mX2gYSX.png)
+
+### 📹 Proje Video Tanıtımı
+Projeyi tanıtan video için aşağıdaki bağlantıya tıklayabilirsiniz:  
+[Proje Tanıtım Videosu](https://imgur.com/TRz7aV9)
+
 
 ## Kurulum ⚡
 
@@ -55,4 +58,3 @@ Projeyi yerel bilgisayarınızda çalıştırmak için aşağıdaki adımları i
 1. **Repo'yu klonlayın**:
    ```bash
    git clone https://github.com/ozlemars/YTNK-ToDoList.git
-
