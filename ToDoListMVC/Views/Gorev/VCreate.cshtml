@@ -1,0 +1,178 @@
+﻿@model ToDoListMVC.Models.Gorev
+
+@{
+    ViewData["Title"] = "Görev Ekle";
+}
+
+<style>
+    /* Özel CSS Stilleri */
+    .priority-option {
+        padding: 10px;
+        margin: 5px 0;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+        .priority-option.selected[data-priority="Düşük"] {
+            background-color: green;
+            color: white;
+        }
+
+        .priority-option.selected[data-priority="Orta"] {
+            background-color: yellow;
+            color: black;
+        }
+
+        .priority-option.selected[data-priority="Yüksek"] {
+            background-color: red;
+            color: white;
+        }
+
+    .form-check-input {
+        display: none; /* Radio button'ları gizle */
+    }
+
+    .form-check-label {
+        cursor: pointer;
+    }
+
+    /* Görev Ekle Butonu için Özel Stil */
+    .btn-custom {
+        background-color: #007bff;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 5px;
+        border: none;
+        transition: background-color 0.3s ease;
+    }
+
+        .btn-custom:hover {
+            background-color: #0056b3;
+        }
+
+    /* Kart Stili */
+    .task-card {
+        margin-top: 20px;
+    }
+</style>
+
+<h2 class="text-center">📝 Yeni Görev Ekle</h2>
+
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <form asp-action="VCreate">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div class="form-group">
+                <label asp-for="TaskName" class="control-label">Görev Adı</label>
+                <input asp-for="TaskName" class="form-control" />
+                <span asp-validation-for="TaskName" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="AssignedBy" class="control-label">Atanan Kişi</label>
+                <input asp-for="AssignedBy" class="form-control" />
+                <span asp-validation-for="AssignedBy" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Description" class="control-label">Açıklama</label>
+                <textarea asp-for="Description" class="form-control"></textarea>
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+
+            <!-- Önem Derecesi Seçimi -->
+            <div class="form-group">
+                <label class="control-label">Önem Derecesi</label>
+                <div>
+                    <!-- Düşük Öncelik -->
+                    <div class="form-check priority-option" data-priority="Düşük">
+                        <input class="form-check-input" type="radio" name="Priority" value="Düşük" id="priorityLow" />
+                        <label class="form-check-label" for="priorityLow">Düşük</label>
+                    </div>
+                    <!-- Orta Öncelik -->
+                    <div class="form-check priority-option" data-priority="Orta">
+                        <input class="form-check-input" type="radio" name="Priority" value="Orta" id="priorityMedium" />
+                        <label class="form-check-label" for="priorityMedium">Orta</label>
+                    </div>
+                    <!-- Yüksek Öncelik -->
+                    <div class="form-check priority-option" data-priority="Yüksek">
+                        <input class="form-check-input" type="radio" name="Priority" value="Yüksek" id="priorityHigh" />
+                        <label class="form-check-label" for="priorityHigh">Yüksek</label>
+                    </div>
+                </div>
+                <span class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Deadline" class="control-label">Bitiş Tarihi</label>
+                <input asp-for="Deadline" type="date" class="form-control" />
+                <span asp-validation-for="Deadline" class="text-danger"></span>
+            </div>
+
+            <!-- Görev Ekle Butonu -->
+            <div class="form-group text-center mt-3">
+                <button type="submit" class="btn btn-custom">Görev Ekle</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<!-- Eklenen Görevin Kart Olarak Gösterilmesi -->
+@if (TempData["LastAddedTask"] != null)
+{
+    var lastAddedTask = TempData["LastAddedTask"] as ToDoListMVC.Models.Gorev;
+    <div class="row justify-content-center mt-4">
+        <div class="col-md-6">
+            <div class="card task-card shadow-lg @(lastAddedTask.Priority == "Yüksek" ? "border-danger" : lastAddedTask.Priority == "Orta" ? "border-warning" : "border-success")">
+                <div class="card-header">
+                    <h5 class="card-title text-center">@lastAddedTask.TaskName</h5>
+                </div>
+                <div class="card-body">
+                    <p class="task-info"><strong>Atanan Kişi:</strong> @lastAddedTask.AssignedBy</p>
+                    <p class="task-info"><strong>Önem Derecesi:</strong> <span class="badge @(lastAddedTask.Priority == "Yüksek" ? "bg-danger" : lastAddedTask.Priority == "Orta" ? "bg-warning" : "bg-success")">@lastAddedTask.Priority</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+<!-- Geri Dön Butonu -->
+<div class="text-center mt-3">
+    <a asp-action="Index" class="btn btn-secondary">Geri Dön</a>
+</div>
+
+<!-- JavaScript -->
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const priorityOptions = document.querySelectorAll('.priority-option');
+
+        priorityOptions.forEach(option => {
+            const radioButton = option.querySelector('input[type="radio"]');
+
+            // Radio buton değiştiğinde arka plan rengini güncelle
+            radioButton.addEventListener('change', function () {
+                // Tüm seçeneklerden "selected" class'ını kaldır
+                priorityOptions.forEach(opt => opt.classList.remove('selected'));
+
+                // Seçilen öğeye "selected" class'ını ekle
+                if (radioButton.checked) {
+                    option.classList.add('selected');
+                }
+            });
+
+            // Öğeye tıklandığında radio butonu seç
+            option.addEventListener('click', function () {
+                radioButton.checked = true;
+                radioButton.dispatchEvent(new Event('change')); // Change event'ini tetikle
+            });
+        });
+    });
+</script>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

@@ -1,0 +1,64 @@
+﻿@model ToDoListMVC.Models.Gorev
+
+@{
+    ViewData["Title"] = "Görev Güncelle";
+}
+<div id="taskCard" class="container mt-5 p-4 rounded">
+    <h2 class="text-center">✏️ Görev Güncelle</h2>
+
+    <form asp-action="Edit" method="post">
+        <label class="form-label">Atanan Kişi</label>
+        <input type="text" class="form-control" asp-for="AssignedBy" required />
+
+        <div class="mb-3">
+            <label class="form-label">Görev Adı</label>
+            <input type="text" class="form-control" asp-for="TaskName" required />
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Açıklama</label>
+            <textarea class="form-control" asp-for="Description" required></textarea>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Bitiş Tarihi</label>
+            <input type="date" class="form-control" asp-for="Deadline" required />
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Önem Derecesi</label>
+            <select class="form-control" asp-for="Priority" id="priority">
+                <option value="Düşük">🟢 Düşük</option>
+                <option value="Orta">🟡 Orta</option>
+                <option value="Yüksek">🔴 Yüksek</option>
+            </select>
+        </div>
+
+        <div class="text-center">
+            <button type="submit" class="btn btn-success">💾 Kaydet</button>
+            <a asp-action="Index" class="btn btn-secondary">İptal</a>
+        </div>
+    </form>
+</div>
+
+<script>
+    function updateBackgroundColor() {
+        var priority = document.getElementById("priority").value;
+        var card = document.getElementById("taskCard");
+
+        if (priority === "Düşük") {
+            card.style.backgroundColor = "#d4edda"; // Açık Yeşil
+        } else if (priority === "Orta") {
+            card.style.backgroundColor = "#fff3cd"; // Açık Sarı
+        } else if (priority === "Yüksek") {
+            card.style.backgroundColor = "#f8d7da"; // Açık Kırmızı
+        }
+    }
+
+    // Sayfa yüklendiğinde ilk ayarı yap
+    document.addEventListener("DOMContentLoaded", updateBackgroundColor);
+
+    // Kullanıcı seçim yaptığında güncelle
+    document.getElementById("priority").addEventListener("change", updateBackgroundColor);
+</script>
+
