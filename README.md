@@ -2,7 +2,7 @@
 
 ## Proje Hakkında 🎯
 
-Bu proje, İstanbul Eğitim Akademesi - Yetenek Başakşehir Proje kapsamında, değerli hocam **Ömer Faruk Doğan** (@OmerFarukD)'dan aldığım eğitimlerle geliştirilmiştir. **MVC ** kullanarak basit ama işlevsel bir **"To-Do List"** uygulaması oluşturulmuştur. Kullanıcılar, görevlerini **ekleyebilir**, **düzenleyebilir** ve **silebilir**. Ayrıca, görevlerin öncelik seviyelerine göre renk kodlaması yaparak, görev takibini oldukça kolaylaştıran bir arayüz geliştirilmiştir.
+Bu proje, İstanbul Eğitim Akademesi - Yetenek Başakşehir Proje kapsamında, değerli hocam **Ömer Faruk Doğan** (@OmerFarukD)'dan aldığım eğitimlerle geliştirilmiştir. **MVC** kullanarak basit ama işlevsel bir **"To-Do List"** uygulaması oluşturulmuştur. Kullanıcılar, görevlerini **ekleyebilir**, **düzenleyebilir** ve **silebilir**. Ayrıca, görevlerin öncelik seviyelerine göre renk kodlaması yaparak, görev takibini oldukça kolaylaştıran bir arayüz geliştirilmiştir.
 
    Not: Bu projede kullanılan .cshtml dosyaları, ChatGPT ve DeepSekten tamamen yararlanılarak hazırlanmıştır. 🤖
 
@@ -17,7 +17,7 @@ Bu proje, İstanbul Eğitim Akademesi - Yetenek Başakşehir Proje kapsamında, 
 
 | Teknoloji              | Açıklama                                           |
 |------------------------|---------------------------------------------------|
-| **ASP.NET MVC **       | Web uygulamaları geliştirmek için kullanılan framework |
+| **ASP.NET MVC**       | Web uygulamaları geliştirmek için kullanılan framework |
 | **C#**                  | Backend geliştirme için kullanılan güçlü programlama dili |
 | **HTML5 & CSS3**        | Web sayfası yapısı ve tasarımı için kullanılan diller |
 | **JavaScript**          | Dinamik işlevsellik sağlamak için kullanılan dil |
