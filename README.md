@@ -1,8 +1,8 @@
-# To-Do List Uygulaması (MVC 5) 📝
+# To-Do List Uygulaması (MVC) 📝
 
 ## Proje Hakkında 🎯
 
-Bu proje, İstanbul Eğitim Akademesi - Yetenek Başakşehir Proje kapsamında, değerli hocam **Ömer Faruk Doğan** (@OmerFarukD)'dan aldığım eğitimlerle geliştirilmiştir. **MVC 5** kullanarak basit ama işlevsel bir **"To-Do List"** uygulaması oluşturulmuştur. Kullanıcılar, görevlerini **ekleyebilir**, **düzenleyebilir** ve **silebilir**. Ayrıca, görevlerin öncelik seviyelerine göre renk kodlaması yaparak, görev takibini oldukça kolaylaştıran bir arayüz geliştirilmiştir.
+Bu proje, İstanbul Eğitim Akademesi - Yetenek Başakşehir Proje kapsamında, değerli hocam **Ömer Faruk Doğan** (@OmerFarukD)'dan aldığım eğitimlerle geliştirilmiştir. **MVC ** kullanarak basit ama işlevsel bir **"To-Do List"** uygulaması oluşturulmuştur. Kullanıcılar, görevlerini **ekleyebilir**, **düzenleyebilir** ve **silebilir**. Ayrıca, görevlerin öncelik seviyelerine göre renk kodlaması yaparak, görev takibini oldukça kolaylaştıran bir arayüz geliştirilmiştir.
 
    Not: Bu projede kullanılan .cshtml dosyaları, ChatGPT ve DeepSekten tamamen yararlanılarak hazırlanmıştır. 🤖
 
@@ -17,7 +17,7 @@ Bu proje, İstanbul Eğitim Akademesi - Yetenek Başakşehir Proje kapsamında, 
 
 | Teknoloji              | Açıklama                                           |
 |------------------------|---------------------------------------------------|
-| **ASP.NET MVC 5**       | Web uygulamaları geliştirmek için kullanılan framework |
+| **ASP.NET MVC **       | Web uygulamaları geliştirmek için kullanılan framework |
 | **C#**                  | Backend geliştirme için kullanılan güçlü programlama dili |
 | **HTML5 & CSS3**        | Web sayfası yapısı ve tasarımı için kullanılan diller |
 | **JavaScript**          | Dinamik işlevsellik sağlamak için kullanılan dil |
@@ -34,21 +34,30 @@ Bu proje, İstanbul Eğitim Akademesi - Yetenek Başakşehir Proje kapsamında, 
 
 Proje, kullanıcıların rahatça görevlerini takip edebilmesi için basit ve etkili bir arayüze sahiptir. Aşağıdaki görsellerde, uygulamanın ana sayfasındaki görev kartları, görev ekleme ve düzenleme işlemleri gösterilmektedir.
 
-### 🏠 Anasayfa
+### 🏠 Anasayfa ve ➕ Görev Ekleme
 Anasayfa, tüm görevlerin listelendiği ve yönetilebildiği sayfadır.  
-![Anasayfa](https://i.imgur.com/AOT7UsA.png)
-
-### ➕ Görev Ekleme
 Yeni görev eklemek için bu sayfa kullanılmaktadır.  
-![Görev Ekleme](https://i.imgur.com/mqtBzZ6.png)
 
-### ✏️ Görev Güncelleme
-Var olan bir görevi düzenlemek için bu sayfa kullanılmaktadır.  
-![Görev Güncelleme](https://i.imgur.com/mX2gYSX.png)
+<div align="center">
+  <img src="https://i.imgur.com/5iw0YOz.png" width="400" height="250"> 
+  <img src="https://i.imgur.com/XATmrJG.png" width="400" height="250">
+</div>
+
+### ✏️ Görev Güncelleme ve 🗑️ Görev Silme
+Var olan bir görevi düzenlemek ve silmek için aşağıdaki sayfalar kullanılmaktadır.  
+
+<div align="center">
+  <img src="https://i.imgur.com/hfDWCrl.png" width="400" height="250">
+  <img src="https://i.imgur.com/MTGhJJ0.png" width="400" height="250">
+</div>
+
+
+
+
 
 ### 📹 Proje Video Tanıtımı
 Projeyi tanıtan video için aşağıdaki bağlantıya tıklayabilirsiniz:  
-[Proje Tanıtım Videosu](https://imgur.com/TRz7aV9)
+[Proje Tanıtım Videosue](https://imgur.com/TRz7aV9)
 
 
 ## Kurulum ⚡
